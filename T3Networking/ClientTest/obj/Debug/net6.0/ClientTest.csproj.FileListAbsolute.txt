@@ -1,0 +1,15 @@
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\bin\Debug\net6.0\ClientTest.exe
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\bin\Debug\net6.0\ClientTest.deps.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\bin\Debug\net6.0\ClientTest.runtimeconfig.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\bin\Debug\net6.0\ClientTest.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\bin\Debug\net6.0\ClientTest.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.csproj.AssemblyReference.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.AssemblyInfoInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.AssemblyInfo.cs
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.csproj.CoreCompileInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\refint\ClientTest.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ClientTest.genruntimeconfig.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ClientTest\obj\Debug\net6.0\ref\ClientTest.dll

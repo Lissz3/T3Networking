@@ -1,0 +1,17 @@
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.csproj.AssemblyReference.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.Form1.resources
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.csproj.GenerateResource.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.AssemblyInfoInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.AssemblyInfo.cs
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.csproj.CoreCompileInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\bin\Debug\net6.0-windows\Ex1Client.exe
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\bin\Debug\net6.0-windows\Ex1Client.deps.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\bin\Debug\net6.0-windows\Ex1Client.runtimeconfig.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\bin\Debug\net6.0-windows\Ex1Client.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\bin\Debug\net6.0-windows\Ex1Client.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\refint\Ex1Client.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\Ex1Client.genruntimeconfig.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex1Client\obj\Debug\net6.0-windows\ref\Ex1Client.dll
