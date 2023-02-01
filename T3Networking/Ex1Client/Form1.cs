@@ -91,15 +91,24 @@ namespace Ex1Client
 			switch (res)
 			{
 				case DialogResult.OK:
-					if (int.TryParse(f.txbPort.Text, out PORT))
+					int newPort;
+					if (int.TryParse(f.txbPort.Text, out newPort))
 					{
-						IP_SERVER = f.txbIp.Text;
-						lblAnswer.Text = string.Format("New IP: {0}\nNew port: {1}", IP_SERVER, PORT);
-						conexion = true;
+						if (newPort != PORT && f.txbIp.Text != IP_SERVER && !conexion)
+						{
+							IP_SERVER = f.txbIp.Text;
+							PORT = newPort;
+							lblAnswer.Text = string.Format("New IP: {0}\nNew port: {1}", IP_SERVER, PORT);
+							conexion = true;
+						}
+						else
+						{
+							lblAnswer.Text = "Unnable to connect. This server has been closed before.";
+						}
 					}
 					else
 					{
-						lblAnswer.Text = "IP and Port not changed";
+						lblAnswer.Text = "IP and Port not changed. Invalid port.";
 					}
 
 					break;
