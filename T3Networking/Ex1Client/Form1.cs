@@ -5,20 +5,24 @@ namespace Ex1Client
 {
 	public partial class Form1 : Form
 	{
+		Socket server;
+		bool conexion;
+		string IP_SERVER;
+		int PORT;
+
 		public Form1()
 		{
 			InitializeComponent();
+			conexion = true;
+			IP_SERVER = "127.0.0.1";
+			PORT = 31416;
 		}
 
-		private void btnClick(object sender, EventArgs e)
+		private void Connect()
 		{
-			const string IP_SERVER = "127.0.0.1";
-			string msg;
-			string userMsg;
-			IPEndPoint ie = new IPEndPoint(IPAddress.Parse(IP_SERVER), 31416);
+			IPEndPoint ie = new IPEndPoint(IPAddress.Parse(IP_SERVER), PORT);
 
-			Socket server = new Socket(AddressFamily.InterNetwork,
-			SocketType.Stream, ProtocolType.Tcp);
+			server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 			try
 			{
 				server.Connect(ie);
@@ -27,33 +31,83 @@ namespace Ex1Client
 			{
 				lblAnswer.Text = string.Format("Error connection: {0}\nError code: {1}({2})", se.Message, (SocketError)se.ErrorCode, se.ErrorCode);
 			}
+		}
 
-			using (NetworkStream ns = new NetworkStream(server))
-			using (StreamReader sr = new StreamReader(ns))
-			using (StreamWriter sw = new StreamWriter(ns))
+		private void BtnClick(object sender, EventArgs e)
+		{
+			if (conexion)
 			{
-				Button b = (Button)sender;
-				switch (b)
+				Connect();
+
+				using (NetworkStream ns = new NetworkStream(server))
+				using (StreamReader sr = new StreamReader(ns))
+				using (StreamWriter sw = new StreamWriter(ns))
 				{
-					case Button timer when b == btnTimer:
-						sw.WriteLine("time");
-						lblAnswer.Text = sr.ReadLine();
-						break;
-					case Button date when b == btnDate:
-						sw.WriteLine("date");
-						break;
-					case Button all when b == btnAll:
-						break;
-					case Button close when b == btnClose:
-						break;
-					default:
-						break;
-
-
+					Button b = (Button)sender;
+					switch (b)
+					{
+						case Button timer when b == btnTimer:
+							ButtonAction(sw, sr, "time");
+							break;
+						case Button date when b == btnDate:
+							ButtonAction(sw, sr, "date");
+							break;
+						case Button all when b == btnAll:
+							ButtonAction(sw, sr, "all");
+							break;
+						case Button close when b == btnClose:
+							sw.WriteLine("close");
+							sw.Flush();
+							sw.WriteLine(txtPass.Text);
+							sw.Flush();
+							lblAnswer.Text = sr.ReadLine();
+							if (sr.ReadLine() == "close")
+							{
+								server.Close();
+								conexion = false;
+							}
+							break;
+					}
 				}
 			}
-			lblAnswer.Text += "\tEnding connection";
-			server.Close();
+			else
+			{
+				lblAnswer.Text = "No server connected.";
+			}
+		}
+
+		private void ButtonAction(StreamWriter sw, StreamReader sr, string msgToSend)
+		{
+			sw.WriteLine(msgToSend);
+			sw.Flush();
+			lblAnswer.Text = sr.ReadLine();
+		}
+
+		private void BtnNewIpPort_Click(object sender, EventArgs e)
+		{
+			Form2 f = new Form2();
+			DialogResult res;
+			res = f.ShowDialog();
+			switch (res)
+			{
+				case DialogResult.OK:
+					if (int.TryParse(f.txbPort.Text, out PORT))
+					{
+						IP_SERVER = f.txbIp.Text;
+						lblAnswer.Text = string.Format("New IP: {0}\nNew port: {1}", IP_SERVER, PORT);
+						conexion = true;
+					}
+					else
+					{
+						lblAnswer.Text = "IP and Port not changed";
+					}
+
+					break;
+				case DialogResult.Cancel:
+					lblAnswer.Text = "IP and Port not changed";
+					break;
+			}
 		}
 	}
 }
+

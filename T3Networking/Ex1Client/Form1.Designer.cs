@@ -32,9 +32,10 @@
 			this.btnDate = new System.Windows.Forms.Button();
 			this.btnAll = new System.Windows.Forms.Button();
 			this.btnClose = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtPass = new System.Windows.Forms.TextBox();
 			this.lblAnswer = new System.Windows.Forms.Label();
 			this.lblPassword = new System.Windows.Forms.Label();
+			this.btnNewIpPort = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnTimer
@@ -45,7 +46,7 @@
 			this.btnTimer.TabIndex = 0;
 			this.btnTimer.Text = "Time";
 			this.btnTimer.UseVisualStyleBackColor = true;
-			this.btnTimer.Click += new System.EventHandler(this.btnClick);
+			this.btnTimer.Click += new System.EventHandler(this.BtnClick);
 			// 
 			// btnDate
 			// 
@@ -55,6 +56,7 @@
 			this.btnDate.TabIndex = 1;
 			this.btnDate.Text = "Date";
 			this.btnDate.UseVisualStyleBackColor = true;
+			this.btnDate.Click += new System.EventHandler(this.BtnClick);
 			// 
 			// btnAll
 			// 
@@ -64,6 +66,7 @@
 			this.btnAll.TabIndex = 2;
 			this.btnAll.Text = "All";
 			this.btnAll.UseVisualStyleBackColor = true;
+			this.btnAll.Click += new System.EventHandler(this.BtnClick);
 			// 
 			// btnClose
 			// 
@@ -73,18 +76,19 @@
 			this.btnClose.TabIndex = 3;
 			this.btnClose.Text = "Close";
 			this.btnClose.UseVisualStyleBackColor = true;
+			this.btnClose.Click += new System.EventHandler(this.BtnClick);
 			// 
-			// textBox1
+			// txtPass
 			// 
-			this.textBox1.Location = new System.Drawing.Point(85, 41);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(83, 23);
-			this.textBox1.TabIndex = 4;
+			this.txtPass.Location = new System.Drawing.Point(85, 41);
+			this.txtPass.Name = "txtPass";
+			this.txtPass.Size = new System.Drawing.Size(83, 23);
+			this.txtPass.TabIndex = 4;
 			// 
 			// lblAnswer
 			// 
 			this.lblAnswer.AutoSize = true;
-			this.lblAnswer.Location = new System.Drawing.Point(16, 86);
+			this.lblAnswer.Location = new System.Drawing.Point(16, 106);
 			this.lblAnswer.Name = "lblAnswer";
 			this.lblAnswer.Size = new System.Drawing.Size(46, 15);
 			this.lblAnswer.TabIndex = 5;
@@ -99,19 +103,31 @@
 			this.lblPassword.TabIndex = 6;
 			this.lblPassword.Text = "Password";
 			// 
+			// btnNewIpPort
+			// 
+			this.btnNewIpPort.Location = new System.Drawing.Point(16, 70);
+			this.btnNewIpPort.Name = "btnNewIpPort";
+			this.btnNewIpPort.Size = new System.Drawing.Size(233, 23);
+			this.btnNewIpPort.TabIndex = 7;
+			this.btnNewIpPort.Text = "New IP and Port";
+			this.btnNewIpPort.UseVisualStyleBackColor = true;
+			this.btnNewIpPort.Click += new System.EventHandler(this.BtnNewIpPort_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(279, 204);
+			this.Controls.Add(this.btnNewIpPort);
 			this.Controls.Add(this.lblPassword);
 			this.Controls.Add(this.lblAnswer);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtPass);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnAll);
 			this.Controls.Add(this.btnDate);
 			this.Controls.Add(this.btnTimer);
 			this.Name = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Client";
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -127,5 +143,7 @@
 		private TextBox textBox1;
 		private Label lblAnswer;
 		private Label lblPassword;
+		private TextBox txtPass;
+		private Button btnNewIpPort;
 	}
 }
