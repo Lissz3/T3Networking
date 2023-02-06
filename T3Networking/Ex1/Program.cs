@@ -27,12 +27,32 @@ namespace Ex1
 		{
 			string password;
 			bool closed = false;
+			bool portUsed = true;
+			string userPass = "";
+			int port = 135;
+			IPEndPoint ie = new IPEndPoint(IPAddress.Any, port);
 			while (!closed)
 			{
-				IPEndPoint ie = new IPEndPoint(IPAddress.Any, 31416);
+				//int port = 31416;
+
 				using (Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
 				{
-					s.Bind(ie);
+					do  //Comprobación de puerto en uso y suma +1 al puerto para buscar el siguiente 
+					{
+						try
+						{
+							ie = new IPEndPoint(IPAddress.Any, port);
+							s.Bind(ie);
+							portUsed = false;
+						}
+						catch (SocketException e) when (e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+						{
+							Console.WriteLine("Port {0} already in use, searching for a new one...", port);
+							port++;
+						}
+
+					} while (portUsed);
+
 					s.Listen(10);
 					Console.WriteLine($"Server listening at port:{ie.Port}");
 					Socket sClient = s.Accept();
@@ -43,12 +63,18 @@ namespace Ex1
 					using (StreamReader sr = new StreamReader(ns))
 					using (StreamWriter sw = new StreamWriter(ns))
 					{
-						//sr.BaseStream.ReadTimeout = 3000;
 						DateTime today = DateTime.Now;
 						string msg = "";
 						try
 						{
 							msg = sr.ReadLine();
+							if (msg.Contains("close"))
+							{
+								string passMsg = msg;
+								string[] passSplit = passMsg.Split("close", StringSplitOptions.None);
+								userPass = passSplit[passSplit.Length - 1].Trim();
+								msg = "close";
+							}
 							if (msg != null)
 							{
 								switch (msg)
@@ -67,7 +93,6 @@ namespace Ex1
 										break;
 									case "close":
 										password = Password();
-										string userPass = sr.ReadLine();
 										if (userPass != "" && password != null)
 										{
 											if (userPass == password)
@@ -92,8 +117,6 @@ namespace Ex1
 										sw.WriteLine("ERR0R02");
 										break;
 								}
-								//Console.WriteLine(msg);
-								//sw.Flush();
 							}
 						}
 						catch (IOException e)
@@ -105,7 +128,10 @@ namespace Ex1
 					}
 					sClient.Close(); // Este no se abre con using, pues lo devuelve el accept.
 				}
+
+
 			}
+
 		}
 
 		static void Main(string[] args)

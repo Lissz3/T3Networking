@@ -44,6 +44,7 @@
 			this.btnTimer.Name = "btnTimer";
 			this.btnTimer.Size = new System.Drawing.Size(75, 23);
 			this.btnTimer.TabIndex = 0;
+			this.btnTimer.Tag = "time";
 			this.btnTimer.Text = "Time";
 			this.btnTimer.UseVisualStyleBackColor = true;
 			this.btnTimer.Click += new System.EventHandler(this.BtnClick);
@@ -54,6 +55,7 @@
 			this.btnDate.Name = "btnDate";
 			this.btnDate.Size = new System.Drawing.Size(75, 23);
 			this.btnDate.TabIndex = 1;
+			this.btnDate.Tag = "date";
 			this.btnDate.Text = "Date";
 			this.btnDate.UseVisualStyleBackColor = true;
 			this.btnDate.Click += new System.EventHandler(this.BtnClick);
@@ -64,6 +66,7 @@
 			this.btnAll.Name = "btnAll";
 			this.btnAll.Size = new System.Drawing.Size(75, 23);
 			this.btnAll.TabIndex = 2;
+			this.btnAll.Tag = "all";
 			this.btnAll.Text = "All";
 			this.btnAll.UseVisualStyleBackColor = true;
 			this.btnAll.Click += new System.EventHandler(this.BtnClick);
@@ -74,6 +77,7 @@
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(75, 23);
 			this.btnClose.TabIndex = 3;
+			this.btnClose.Tag = "close";
 			this.btnClose.Text = "Close";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.BtnClick);

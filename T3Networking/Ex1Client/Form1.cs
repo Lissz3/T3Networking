@@ -18,7 +18,7 @@ namespace Ex1Client
 			PORT = 31416;
 		}
 
-		private void Connect()
+		private bool Connect()
 		{
 			IPEndPoint ie = new IPEndPoint(IPAddress.Parse(IP_SERVER), PORT);
 
@@ -26,54 +26,51 @@ namespace Ex1Client
 			try
 			{
 				server.Connect(ie);
+				return true;
 			}
 			catch (SocketException se)
 			{
 				lblAnswer.Text = string.Format("Error connection: {0}\nError code: {1}({2})", se.Message, (SocketError)se.ErrorCode, se.ErrorCode);
+				return false;
 			}
 		}
 
 		private void BtnClick(object sender, EventArgs e)
 		{
-			if (conexion)
+			if (Connect()) //No salta excepcion, si no se puede conectar no entra
 			{
-				Connect();
-
-				using (NetworkStream ns = new NetworkStream(server))
-				using (StreamReader sr = new StreamReader(ns))
-				using (StreamWriter sw = new StreamWriter(ns))
+				if (conexion)
 				{
-					Button b = (Button)sender;
-					switch (b)
+					using (NetworkStream ns = new NetworkStream(server))
+					using (StreamReader sr = new StreamReader(ns))
+					using (StreamWriter sw = new StreamWriter(ns))
 					{
-						case Button timer when b == btnTimer:
-							ButtonAction(sw, sr, "time");
-							break;
-						case Button date when b == btnDate:
-							ButtonAction(sw, sr, "date");
-							break;
-						case Button all when b == btnAll:
-							ButtonAction(sw, sr, "all");
-							break;
-						case Button close when b == btnClose:
-							sw.WriteLine("close");
-							sw.Flush();
-							sw.WriteLine(txtPass.Text);
-							sw.Flush();
-							lblAnswer.Text = sr.ReadLine();
-							if (sr.ReadLine() == "close")
-							{
-								server.Close();
-								conexion = false;
-							}
-							break;
+						Button b = (Button)sender;
+						string command; //Envia comando y contraseña en el mismo mensaje
+						if (b.Tag != "close")
+						{
+							command = b.Tag.ToString();
+						}
+						else
+						{
+							command = b.Tag.ToString() + txtPass.Text;
+						}
+
+						ButtonAction(sw, sr, command);
+
+						server.Close();
 					}
+				}
+				else
+				{
+					lblAnswer.Text = "No server connected.";
 				}
 			}
 			else
 			{
-				lblAnswer.Text = "No server connected.";
+				lblAnswer.Text = "Unnable to connect.";
 			}
+
 		}
 
 		private void ButtonAction(StreamWriter sw, StreamReader sr, string msgToSend)
@@ -92,7 +89,7 @@ namespace Ex1Client
 			{
 				case DialogResult.OK:
 					int newPort;
-					if (int.TryParse(f.txbPort.Text, out newPort))
+					if (int.TryParse(f.txbPort.Text, out newPort) && IPAddress.TryParse(f.txbIp.Text, out _)) //Parse IP
 					{
 						if (newPort != PORT && f.txbIp.Text != IP_SERVER && !conexion)
 						{
@@ -104,16 +101,19 @@ namespace Ex1Client
 						else
 						{
 							lblAnswer.Text = "Unnable to connect. This server has been closed before.";
+							conexion = false;
 						}
 					}
 					else
 					{
-						lblAnswer.Text = "IP and Port not changed. Invalid port.";
+						lblAnswer.Text = "IP and Port not changed. Invalid IP or Port.";
+						conexion = false;
 					}
 
 					break;
 				case DialogResult.Cancel:
-					lblAnswer.Text = "IP and Port not changed";
+					lblAnswer.Text = "IP and Port not changed.";
+					conexion = false;
 					break;
 			}
 		}
