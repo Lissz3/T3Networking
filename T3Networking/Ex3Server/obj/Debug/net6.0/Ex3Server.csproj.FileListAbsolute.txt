@@ -1,0 +1,15 @@
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\bin\Debug\net6.0\Ex3Server.exe
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\bin\Debug\net6.0\Ex3Server.deps.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\bin\Debug\net6.0\Ex3Server.runtimeconfig.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\bin\Debug\net6.0\Ex3Server.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\bin\Debug\net6.0\Ex3Server.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.csproj.AssemblyReference.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.AssemblyInfoInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.AssemblyInfo.cs
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.csproj.CoreCompileInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\refint\Ex3Server.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\Ex3Server.genruntimeconfig.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\Ex3Server\obj\Debug\net6.0\ref\Ex3Server.dll
