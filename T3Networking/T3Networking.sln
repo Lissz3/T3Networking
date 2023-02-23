@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex1Client", "Ex1Client\Ex1C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex2Client", "Ex2Client\Ex2Client.csproj", "{1F954B67-BDBC-42A2-9A9F-CA8480447422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex3Server", "Ex3Server\Ex3Server.csproj", "{808EBCAF-C852-4AE5-A90F-D87FC7122350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex3Server", "Ex3Server\Ex3Server.csproj", "{808EBCAF-C852-4AE5-A90F-D87FC7122350}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

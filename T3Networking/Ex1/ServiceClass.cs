@@ -1,13 +1,16 @@
-﻿using System.Net.Sockets;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Sockets;
 using System.Net;
-using System.IO;
-using System.Runtime.Intrinsics.X86;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Ex1
 {
-	public class Program
+	public class ServiceClass
 	{
-		public static string Password()
+		public string Password()
 		{
 			try
 			{
@@ -23,7 +26,7 @@ namespace Ex1
 			}
 		}
 
-		public static void Server()
+		public void Server()
 		{
 			string password;
 			bool closed = false;
@@ -128,15 +131,12 @@ namespace Ex1
 					}
 					sClient.Close(); // Este no se abre con using, pues lo devuelve el accept.
 				}
-
-
 			}
-
 		}
-
-		static void Main(string[] args)
+		public void Init()
 		{
 			Server();
 		}
 	}
+
 }

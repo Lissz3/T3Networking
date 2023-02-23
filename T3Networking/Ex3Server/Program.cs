@@ -54,7 +54,7 @@ namespace Ex3Server
 										foreach (string client in clients.Keys)
 										{
 											sw.WriteLine("Nombre: "+client);
-											sw.Flush();
+											sw.Flush();  
 										}
 									}
 									else
