@@ -1,0 +1,15 @@
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\bin\Debug\net6.0\ShiftServer.exe
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\bin\Debug\net6.0\ShiftServer.deps.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\bin\Debug\net6.0\ShiftServer.runtimeconfig.json
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\bin\Debug\net6.0\ShiftServer.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\bin\Debug\net6.0\ShiftServer.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.csproj.AssemblyReference.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.AssemblyInfoInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.AssemblyInfo.cs
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.csproj.CoreCompileInputs.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\refint\ShiftServer.dll
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.pdb
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ShiftServer.genruntimeconfig.cache
+G:\Mi unidad\02.PROG SERV\2EV\Tema3\T3Networking\T3Networking\ShiftServer\obj\Debug\net6.0\ref\ShiftServer.dll

@@ -128,8 +128,6 @@ namespace Ex1
 					}
 					sClient.Close(); // Este no se abre con using, pues lo devuelve el accept.
 				}
-
-
 			}
 
 		}

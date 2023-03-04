@@ -22,7 +22,7 @@ namespace Ex3Server
 			using (StreamWriter sw = new StreamWriter(ns))
 			{
 				bool disconnected = false;
-				string welcome = "Welcome to the ChatRoom.\nEnter your name:".Replace("\n", Environment.NewLine);
+				string welcome = "Welcome to the ChatRoom. Enter your name:".Replace("\n", Environment.NewLine);
 				sw.WriteLine(welcome);
 				sw.Flush();
 				string name = sr.ReadLine();
@@ -43,18 +43,18 @@ namespace Ex3Server
 							{
 								if (mensaje != null)
 								{
-									if (mensaje.Contains("#exit"))
+									if (mensaje == "#exit") //contains
 									{
 										throw new IOException();
 									}
-									else if (mensaje.Contains("#lista"))
+									else if (mensaje == "#lista") //contains
 									{
 										sw.WriteLine("Usuarios conectados:");
 										sw.Flush();
 										foreach (string client in clients.Keys)
 										{
-											sw.WriteLine("Nombre: "+client);
-											sw.Flush();  
+											sw.WriteLine("Nombre: " + client);
+											sw.Flush();
 										}
 									}
 									else
@@ -104,17 +104,36 @@ namespace Ex3Server
 
 		public static void Server()
 		{
-			IPEndPoint ie = new IPEndPoint(IPAddress.Any, 31416);
-			Socket s = new Socket(AddressFamily.InterNetwork,
-			SocketType.Stream, ProtocolType.Tcp);
-			s.Bind(ie);
-			s.Listen(10);
-			Console.WriteLine("Server waiting at port {0}", ie.Port);
-			while (true)
+			bool portUsed = true;
+			int port = 31416;
+			using (Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
 			{
-				Socket client = s.Accept();
-				Thread t = new Thread(ClientThread);
-				t.Start(client);
+
+				IPEndPoint ie = new IPEndPoint(IPAddress.Any, port); //comprobacion puerto ocupado
+				do
+				{
+					try
+					{
+						ie = new IPEndPoint(IPAddress.Any, port);
+						s.Bind(ie);
+						portUsed = false;
+					}
+					catch (SocketException e) when (e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+					{
+						Console.WriteLine("Port {0} already in use, searching for a new one...", port);
+						port++;
+					}
+
+				} while (portUsed);
+
+				s.Listen(10);
+				Console.WriteLine("Server waiting at port {0}", ie.Port);
+				while (true)
+				{
+					Socket client = s.Accept();
+					Thread t = new Thread(ClientThread);
+					t.Start(client);
+				}
 			}
 
 		}
